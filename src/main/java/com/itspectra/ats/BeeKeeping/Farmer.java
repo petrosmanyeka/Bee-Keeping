@@ -2,6 +2,11 @@ package com.itspectra.ats.BeeKeeping;
 
 import lombok.*;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table
 @Data
 @Setter
 @Getter
