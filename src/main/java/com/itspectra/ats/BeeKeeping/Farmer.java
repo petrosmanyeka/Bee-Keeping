@@ -1,5 +1,13 @@
 package com.itspectra.ats.BeeKeeping;
 
+import lombok.*;
+
+@Data
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class Farmer {
     private long id;
     private String f_name;
@@ -8,4 +16,5 @@ public class Farmer {
     private String gender;
     private String email;
     private String country;
+    private int age;
 }
