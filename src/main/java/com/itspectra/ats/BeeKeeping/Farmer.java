@@ -2,8 +2,7 @@ package com.itspectra.ats.BeeKeeping;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table
@@ -13,7 +12,17 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Farmer {
+public class Farmer{
+    @Id
+    /*@SequenceGenerator(
+            name = "manyeka_sequence",
+            sequenceName = "manyeka_sequence",
+            allocationSize = 1
+    )*/
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "manyeka_sequence"
+    )
     private long id;
     private String f_name;
     private String l_name;
