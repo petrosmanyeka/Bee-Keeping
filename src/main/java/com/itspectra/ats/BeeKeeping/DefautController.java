@@ -11,7 +11,9 @@ import java.util.List;
 @RequestMapping(path = "api/v1/farmer")
 public class DefautController {
     private final ServiceClass serviceClass;
+
     @Autowired
+
     public DefautController(ServiceClass serviceClass) {
 
         this.serviceClass = serviceClass;
