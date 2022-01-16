@@ -8,6 +8,7 @@ import java.util.List;
 
 @Configuration
 public class ConfigurationClass {
+
    @Bean
 
     CommandLineRunner commandLineRunner(FarmRepository farmRepository){
