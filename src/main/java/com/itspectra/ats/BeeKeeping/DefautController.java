@@ -19,19 +19,19 @@ public class DefautController {
         this.serviceClass = serviceClass;
     }
 
-    @ApiOperation(value ="Fetch all farmes",response = Iterable.class)
+    @ApiOperation(value = "fetch all farmers",response = Iterable.class)
     @GetMapping
     public List<Farmer> getTableClass() {
         return (List<Farmer>) serviceClass.getTableClass();
     }
 
-    @ApiOperation(value ="insert farmer record",response = Farmer.class)
+    @ApiOperation(value = "Insert farmers details",response = Farmer.class)
     @PostMapping
     public void registerNewFarmer(@RequestBody Farmer farmer){
          serviceClass.addNewFarmer(farmer);
     }
 
-    @ApiOperation(value ="Update farmers Record",response = Farmer.class)
+    @ApiOperation(value = "update farmers reccord",response =Farmer.class )
     @PutMapping(path = "{farmerId}")
     public void updateFarmer(
             @PathVariable("farmerId") Long farmerId,
