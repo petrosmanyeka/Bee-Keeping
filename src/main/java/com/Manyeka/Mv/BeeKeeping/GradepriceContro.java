@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.*;
 
 @AllArgsConstructor
 @RestController
+@CrossOrigin("*")
+@RequestMapping(value = "/api/v1")
 public class GradepriceContro {
     @Autowired
     private GradePriceServ gradePriceServ;
@@ -16,7 +18,7 @@ public class GradepriceContro {
         );
     }
 
-    @GetMapping("/lake")
+    @GetMapping("/price")
     public String getGradeP() {
         return gradePriceServ.getGradeP();
     }
