@@ -17,9 +17,17 @@ public class ControFarme {
 public List<Farmer> getAllFarmers(){
     return farmerRepos.findAll();
 }
+@GetMapping("/farme/{id}")
+public Farmer getFarmerById(@PathVariable long id){
+     return farmerRepos.findById(id).get();
+}
 
 @PostMapping
     public Farmer createFarmer(@RequestBody Farmer farmer){
+     return farmerRepos.save(farmer);
+}
+@PutMapping
+    public Farmer updateFarmer(@RequestBody Farmer farmer){
      return farmerRepos.save(farmer);
 }
 }
